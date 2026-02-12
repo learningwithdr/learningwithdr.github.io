@@ -3,363 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr_Learner - Mechanical Engineering Software Tutorials</title>
+    <title>Dr_Learner - Mechanical Engineering Tutorials</title>
     
-    <!-- Google Search Console Verification -->
+    <!-- Google Search Console Verification - DO NOT REMOVE -->
     <meta name="google-site-verification" content="dcFzSWoOnwnaOdO3XErmWYm_vuFCJhGeL0b5Zd11kXA">
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Dr_Learner YouTube Channel - Professional tutorials for SolidWorks, AutoCAD, CATIA. Learn mechanical engineering software step by step.">
-    <meta name="keywords" content="Dr_Learner, SolidWorks, AutoCAD, CATIA, mechanical engineering, software tutorials, YouTube">
+    <meta name="description" content="Dr_Learner YouTube Channel - Free tutorials for SolidWorks, AutoCAD, CATIA and mechanical engineering software.">
+    <meta name="keywords" content="Dr_Learner, SolidWorks, AutoCAD, CATIA, mechanical engineering, tutorials">
     <meta name="author" content="Dr_Learner">
-    
+
     <style>
-        /* Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: 'Segoe UI', sans-serif;
+            background: #f5f7fa;
             color: #333;
-            background: #f8f9fa;
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
+            line-height: 1.6;
+            text-align: center;
             padding: 20px;
         }
-        
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #FF0000, #CC0000);
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-            border-radius: 0 0 25px 25px;
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px 25px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
         }
-        
         .logo {
             width: 120px;
             height: 120px;
-            border-radius: 50%;
-            border: 4px solid white;
-            margin: 0 auto 20px;
-            background: white;
+            background: #FF0000;
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 40px;
-            font-weight: bold;
-            color: #FF0000;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 5px solid #fff;
+            box-shadow: 0 10px 20px rgba(255,0,0,0.2);
         }
-        
         h1 {
             font-size: 2.5rem;
+            color: #FF0000;
             margin-bottom: 10px;
         }
-        
         .tagline {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 25px;
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
         }
-        
-        /* Buttons */
         .btn {
             display: inline-block;
-            background: white;
-            color: #FF0000;
-            padding: 15px 35px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
+            background: #FF0000;
+            color: white;
+            padding: 14px 35px;
             border-radius: 50px;
-            margin: 10px;
-            transition: all 0.3s ease;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 20px 0;
+            transition: 0.3s;
             border: 2px solid transparent;
         }
-        
         .btn:hover {
-            background: #CC0000;
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-        
-        /* Main Content */
-        .main-content {
             background: white;
-            padding: 40px;
-            margin: 30px 0;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            color: #FF0000;
+            border-color: #FF0000;
         }
-        
-        .section-title {
+        .video-section {
+            margin: 50px 0 30px;
+        }
+        .video-section h2 {
             font-size: 1.8rem;
-            color: #333;
             margin-bottom: 25px;
-            text-align: center;
+            color: #222;
         }
-        
-        /* Video Section */
-        .video-container {
+        .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: 15px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
             background: #000;
         }
-        
-        .video-container iframe {
+        .video-wrapper iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             border: none;
-            border-radius: 15px;
         }
-        
-        /* Social Links */
-        .social-section {
-            text-align: center;
-            margin: 40px 0;
-        }
-        
         .social-links {
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
+            justify-content: center;
             gap: 15px;
-            margin-top: 20px;
+            margin: 40px 0 20px;
         }
-        
         .social-link {
+            background: #f0f2f5;
+            color: #333;
             padding: 12px 25px;
-            background: #4285f4;
-            color: white;
+            border-radius: 40px;
             text-decoration: none;
-            border-radius: 30px;
             font-weight: 500;
-            transition: all 0.3s ease;
+            transition: 0.2s;
         }
-        
         .social-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .social-link.youtube {
             background: #FF0000;
-        }
-        
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #333;
             color: white;
-            margin-top: 50px;
-            border-radius: 20px 20px 0 0;
         }
-        
-        .footer-links {
-            margin: 20px 0;
-        }
-        
-        .footer-link {
-            color: #FF0000;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: 500;
-        }
-        
-        .copyright {
-            margin-top: 20px;
-            opacity: 0.8;
+        footer {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #ddd;
+            color: #777;
             font-size: 0.9rem;
         }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            .main-content { padding: 25px 15px; }
-            .btn { padding: 12px 25px; font-size: 1rem; }
-            .social-links { flex-direction: column; align-items: center; }
-            .social-link { width: 200px; text-align: center; }
+        footer a {
+            color: #FF0000;
+            text-decoration: none;
         }
     </style>
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <i class="fas fa-graduation-cap"></i>
-            </div>
-            <h1>Dr_Learner</h1>
-            <p class="tagline">Professional Mechanical Engineering Software Tutorials</p>
-            
-            <a href="https://www.youtube.com/@learningwithdr?sub_confirmation=1" 
-               class="btn" 
-               target="_blank" 
-               rel="noopener noreferrer">
-               <i class="fab fa-youtube"></i> Subscribe on YouTube
-            </a>
-        </div>
-    </header>
+    <div class="container">
+        <div class="logo">DL</div>
+        <h1>Dr_Learner</h1>
+        <div class="tagline">Mechanical Engineering Software Tutorials</div>
+        
+        <a href="https://www.youtube.com/@learningwithdr?sub_confirmation=1" class="btn" target="_blank">
+            🔔 Subscribe on YouTube
+        </a>
 
-    <!-- Main Content -->
-    <main class="container">
-        <div class="main-content">
-            <!-- Latest Video -->
-            <section>
-                <h2 class="section-title">Latest Tutorial</h2>
-                <div class="video-container">
-                    <!-- ✅ ویدیوی درست با آیدی 9VBlhRMsCq8 -->
-                    <iframe src="https://www.youtube.com/embed/9VBlhRMsCq8" 
-                            title="Dr_Learner - Mechanical Engineering Tutorial"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
-                <p style="text-align: center; margin-top: 20px; color: #666;">
-                    Watch this tutorial to improve your engineering software skills
-                </p>
-            </section>
-
-            <!-- Social Links -->
-            <section class="social-section">
-                <h2 class="section-title">Connect With Me</h2>
-                <div class="social-links">
-                    <a href="https://www.youtube.com/@learningwithdr" 
-                       class="social-link youtube" 
-                       target="_blank" 
-                       rel="noopener noreferrer">
-                       <i class="fab fa-youtube"></i> YouTube Channel
-                    </a>
-                    <a href="https://instagram.com/yourprofile" 
-                       class="social-link" 
-                       target="_blank" 
-                       rel="noopener noreferrer">
-                       <i class="fab fa-instagram"></i> Instagram
-                    </a>
-                    <a href="https://twitter.com/yourprofile" 
-                       class="social-link" 
-                       target="_blank" 
-                       rel="noopener noreferrer">
-                       <i class="fab fa-twitter"></i> Twitter
-                    </a>
-                    <a href="mailto:contact@drlearner.com" 
-                       class="social-link">
-                       <i class="fas fa-envelope"></i> Email
-                    </a>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <h3>Dr_Learner - Engineering Software Tutorials</h3>
-            
-            <div class="footer-links">
-                <a href="https://www.youtube.com/@learningwithdr" 
-                   class="footer-link" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   YouTube Channel
-                </a>
-                <a href="https://www.youtube.com/@learningwithdr/videos" 
-                   class="footer-link" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   All Videos
-                </a>
-                <a href="https://www.youtube.com/@learningwithdr/playlists" 
-                   class="footer-link" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   Playlists
-                </a>
-            </div>
-            
-            <p>Master SolidWorks, AutoCAD, CATIA and other engineering software</p>
-            
-            <div class="copyright">
-                <p>&copy; <span id="currentYear">2023</span> Dr_Learner. All rights reserved.</p>
-                <p>Official Website: 
-                    <a href="https://learningwithdr.github.io" style="color: #FF0000;">
-                        learningwithdr.github.io
-                    </a>
-                </p>
-                <p style="margin-top: 10px; font-size: 0.8rem;">
-                    ✅ Verified by Google Search Console
-                </p>
+        <!-- ✅ آخرین ویدیوی کانال - خودکار -->
+        <div class="video-section">
+            <h2>📺 Latest Tutorial</h2>
+            <div id="latest-video" class="video-wrapper">
+                <p style="padding: 40px;">در حال دریافت آخرین ویدیو...</p>
             </div>
         </div>
-    </footer>
 
-    <!-- JavaScript -->
+        <div class="social-links">
+            <a href="https://www.youtube.com/@learningwithdr" class="social-link" target="_blank">YouTube</a>
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="mailto:dr.learner@example.com" class="social-link">Email</a>
+        </div>
+
+        <footer>
+            <p>© <span id="year"></span> Dr_Learner • Official Website</p>
+            <p>📌 <a href="https://www.youtube.com/@learningwithdr" target="_blank">youtube.com/@learningwithdr</a></p>
+            <p style="margin-top: 10px; opacity: 0.7;">✅ Verified by Google Search Console</p>
+        </footer>
+    </div>
+
+    <!-- ✅ اسکریپت خودکار دریافت آخرین ویدیو -->
     <script>
-        // Update copyright year
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-        
-        // Video error handling
-        const videoIframe = document.querySelector('iframe');
-        if (videoIframe) {
-            videoIframe.addEventListener('load', function() {
-                console.log('✅ Video loaded successfully: 9VBlhRMsCq8');
-            });
-            
-            videoIframe.addEventListener('error', function() {
-                console.log('❌ Video loading error');
-                const errorMsg = document.createElement('div');
-                errorMsg.style.cssText = `
-                    background: #ffebee;
-                    color: #c62828;
-                    padding: 15px;
-                    border-radius: 10px;
-                    margin: 20px auto;
-                    max-width: 500px;
-                    text-align: center;
-                `;
-                errorMsg.innerHTML = `
-                    <p><strong>⚠️ Video Loading Issue</strong></p>
-                    <p>Video ID: <code>9VBlhRMsCq8</code></p>
-                    <p>Please check if the video is public on YouTube.</p>
-                `;
-                document.querySelector('.video-container').after(errorMsg);
-            });
+        // Channel ID شما:
+        const channelId = 'UCBh1Xqcj4kmqjQ_RDuB4jHA';
+
+        async function loadLatestVideo() {
+            const container = document.getElementById('latest-video');
+            try {
+                const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=' + channelId);
+                const data = await res.json();
+                const videoId = data.items[0].guid.split(':').pop();
+                container.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen></iframe>`;
+            } catch (e) {
+                container.innerHTML = '<p style="padding: 40px; color: red;">⚠️ دریافت ویدیو با مشکل مواجه شد.</p>';
+            }
         }
-        
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId !== '#') {
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }
-            });
-        });
+
+        loadLatestVideo();
+
+        // بروزرسانی سال
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
