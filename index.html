@@ -3,55 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr_Learner - Mechanical Engineering Tutorials</title>
+    <title>Dr_Learner - All Tutorials</title>
     
-    <!-- Google Search Console Verification - DO NOT REMOVE -->
+    <!-- Google Search Console -->
     <meta name="google-site-verification" content="dcFzSWoOnwnaOdO3XErmWYm_vuFCJhGeL0b5Zd11kXA">
     
-    <meta name="description" content="Dr_Learner YouTube Channel - Free tutorials for SolidWorks, AutoCAD, CATIA and mechanical engineering software.">
-    <meta name="keywords" content="Dr_Learner, SolidWorks, AutoCAD, CATIA, mechanical engineering, tutorials">
-    <meta name="author" content="Dr_Learner">
-
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', sans-serif;
             background: #f5f7fa;
             color: #333;
-            line-height: 1.6;
-            text-align: center;
             padding: 20px;
         }
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             background: white;
-            padding: 40px 25px;
+            padding: 30px;
             border-radius: 30px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.05);
         }
-        .logo {
-            width: 120px;
-            height: 120px;
-            background: #FF0000;
-            color: white;
-            font-size: 48px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            border: 5px solid #fff;
-            box-shadow: 0 10px 20px rgba(255,0,0,0.2);
-        }
         h1 {
-            font-size: 2.5rem;
             color: #FF0000;
-            margin-bottom: 10px;
+            font-size: 2.5rem;
+            margin-bottom: 5px;
         }
-        .tagline {
-            font-size: 1.2rem;
+        .sub {
             color: #555;
             margin-bottom: 30px;
         }
@@ -59,36 +37,26 @@
             display: inline-block;
             background: #FF0000;
             color: white;
-            padding: 14px 35px;
-            border-radius: 50px;
+            padding: 12px 30px;
+            border-radius: 40px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
-            margin: 20px 0;
-            transition: 0.3s;
-            border: 2px solid transparent;
+            margin-bottom: 40px;
         }
-        .btn:hover {
-            background: white;
-            color: #FF0000;
-            border-color: #FF0000;
-        }
-        .video-section {
-            margin: 50px 0 30px;
-        }
-        .video-section h2 {
+        .latest-title {
             font-size: 1.8rem;
-            margin-bottom: 25px;
-            color: #222;
+            margin: 30px 0 15px;
+            border-bottom: 2px solid #FF0000;
+            padding-bottom: 5px;
         }
         .video-wrapper {
             position: relative;
             padding-bottom: 56.25%;
             height: 0;
-            overflow: hidden;
             border-radius: 20px;
+            overflow: hidden;
             box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-            background: #000;
+            margin-bottom: 50px;
         }
         .video-wrapper iframe {
             position: absolute;
@@ -98,92 +66,108 @@
             height: 100%;
             border: none;
         }
-        .social-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin: 40px 0 20px;
+        .old-videos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
-        .social-link {
-            background: #f0f2f5;
-            color: #333;
-            padding: 12px 25px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 500;
+        .video-card {
+            background: #f9f9f9;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: 0.2s;
         }
-        .social-link:hover {
-            background: #FF0000;
-            color: white;
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .video-card iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: none;
+        }
+        .video-card p {
+            padding: 10px;
+            font-weight: 500;
         }
         footer {
-            margin-top: 40px;
-            padding-top: 30px;
+            margin-top: 50px;
+            padding-top: 20px;
             border-top: 1px solid #ddd;
+            text-align: center;
             color: #777;
-            font-size: 0.9rem;
-        }
-        footer a {
-            color: #FF0000;
-            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">DL</div>
         <h1>Dr_Learner</h1>
-        <div class="tagline">Mechanical Engineering Software Tutorials</div>
-        
+        <div class="sub">Mechanical Engineering Software Tutorials</div>
         <a href="https://www.youtube.com/@learningwithdr?sub_confirmation=1" class="btn" target="_blank">
             🔔 Subscribe on YouTube
         </a>
 
-        <!-- ✅ آخرین ویدیوی کانال - خودکار -->
-        <div class="video-section">
-            <h2>📺 Latest Tutorial</h2>
+        <div id="latest-section">
+            <div class="latest-title">📺 آخرین ویدیو</div>
             <div id="latest-video" class="video-wrapper">
-                <p style="padding: 40px;">در حال دریافت آخرین ویدیو...</p>
+                <p style="padding: 40px;">در حال دریافت ویدیو...</p>
             </div>
         </div>
 
-        <div class="social-links">
-            <a href="https://www.youtube.com/@learningwithdr" class="social-link" target="_blank">YouTube</a>
-            <a href="#" class="social-link">Instagram</a>
-            <a href="#" class="social-link">Twitter</a>
-            <a href="mailto:dr.learner@example.com" class="social-link">Email</a>
+        <div class="latest-title">📚 همه ویدیوها</div>
+        <div id="all-videos" class="old-videos">
+            <p style="grid-column: 1/-1; text-align: center;">در حال بارگذاری...</p>
         </div>
-
-        <footer>
-            <p>© <span id="year"></span> Dr_Learner • Official Website</p>
-            <p>📌 <a href="https://www.youtube.com/@learningwithdr" target="_blank">youtube.com/@learningwithdr</a></p>
-            <p style="margin-top: 10px; opacity: 0.7;">✅ Verified by Google Search Console</p>
-        </footer>
     </div>
 
-    <!-- ✅ اسکریپت خودکار دریافت آخرین ویدیو -->
+    <footer>
+        <p>© <span id="year"></span> Dr_Learner • youtube.com/@learningwithdr</p>
+        <p style="opacity:0.7;">✅ تمام ویدیوها هر ۶ ساعت خودکار بروز می‌شوند</p>
+    </footer>
+
     <script>
-        // Channel ID شما:
         const channelId = 'UCBh1Xqcj4kmqjQ_RDuB4jHA';
 
-        async function loadLatestVideo() {
-            const container = document.getElementById('latest-video');
+        async function loadVideos() {
             try {
                 const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=' + channelId);
                 const data = await res.json();
-                const videoId = data.items[0].guid.split(':').pop();
-                container.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen></iframe>`;
+                const videos = data.items; // همه ویدیوها
+
+                if (videos.length === 0) return;
+
+                // آخرین ویدیو (اولین توی لیست)
+                const latestId = videos[0].guid.split(':').pop();
+                document.getElementById('latest-video').innerHTML = 
+                    `<iframe src="https://www.youtube.com/embed/${latestId}" allowfullscreen></iframe>`;
+
+                // همه ویدیوها (به جز آخرین، که بالاست)
+                let allHtml = '';
+                for (let i = 0; i < videos.length; i++) {
+                    const videoId = videos[i].guid.split(':').pop();
+                    const title = videos[i].title;
+                    allHtml += `
+                        <div class="video-card">
+                            <iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen></iframe>
+                            <p>${title}</p>
+                        </div>
+                    `;
+                }
+                document.getElementById('all-videos').innerHTML = allHtml;
+
             } catch (e) {
-                container.innerHTML = '<p style="padding: 40px; color: red;">⚠️ دریافت ویدیو با مشکل مواجه شد.</p>';
+                document.getElementById('latest-video').innerHTML = '<p style="padding: 40px; color: red;">⚠️ خطا در دریافت ویدیوها</p>';
+                document.getElementById('all-videos').innerHTML = '<p style="color:red;">خطا</p>';
             }
         }
 
-        loadLatestVideo();
-
-        // بروزرسانی سال
+        loadVideos();
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // هر 6 ساعت یکبار خودکار آپدیت می‌کنه (بدون نیاز به دست تو)
+        setInterval(loadVideos, 6 * 60 * 60 * 1000);
     </script>
 </body>
 </html>
